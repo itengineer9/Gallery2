@@ -1,0 +1,191 @@
+
+    /* 
+        Created on : 19.02.2021, 11:25:56
+        Author     : ahmad
+    */
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    :root {
+        --hc:linear-gradient(to bottom, #03899c, rgb(201, 250, 220), #03899c);
+        --bg :linear-gradient(to right, #fec, white, #fec);
+    }
+
+    html,
+    body {
+        height: 1000px;
+        text-align: center;
+        align-items: center;
+        background: var(--bg); 
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    nav{
+        font-size: 20px;
+        font-weight: 500;
+        background: #03899c;
+        height: 40px;
+        width: 100%;
+    }   
+    
+    nav a{
+        font-weight: 600;
+        color: wheat;
+    } 
+
+    nav a:hover{
+        font-weight: 800;
+    } 
+
+    .hh1{
+        color: black; 
+        font-size: 40px;
+        font-weight: 500;
+    }
+    
+    .hh2{
+        color: white; 
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .logo{
+        float: left;
+        width: 60px;
+        height: 45px;
+        margin-top: 5px;
+    }
+    .btn{
+        background: var(--hc);
+        color:  black;
+        height:50px;
+        padding: 10px;
+        border-radius: 35px;
+        width: 130px;
+        font-size: 22px;
+    }
+
+    .btn:hover{
+        color: rgb(37, 156, 97);
+        font-weight: 600;
+    }
+
+    .images{
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        margin-bottom: 60px;
+        height: 300px;
+    }
+
+    .images > img{
+        border: 1px solid gray;
+        border-radius: 5px;
+        box-shadow:2px 2px 2px #888888;
+        width: 70px;
+        height: 70px;
+        margin-left: 3px;
+        cursor: pointer;
+        opacity: .6;
+    }
+    
+    .images > img.active{
+        animation: bouncing 1s ease;
+        opacity: 1;
+    }
+    
+    .container {
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        position: absolute;
+        left:25%;
+    }
+
+    .button{
+        margin-top: 10px;
+    }
+    
+    .bigImg{
+        border: 1px solid gray;
+        border-radius: 5px;
+        background: #374646;
+        margin-top: 20px;
+        width: 700px;
+        height: 580px; 
+        position: relative;
+    }
+
+    .imge{
+        margin-top: 12px; 
+        width: 600px;
+        height: 500px;
+        box-shadow: 5px 15px 20px #888888;
+        border-radius: 7px;     
+    }
+
+    #imgText {
+        position: relative;
+        left: 15px;
+        bottom: 1px;
+        color: rgb(255, 255, 255);
+        font-size: 35px;
+    }
+
+    .nextBtn, .prevBtn{
+        cursor: pointer;
+        position: absolute;
+        top: 25%;
+        width: auto;
+        padding: 6px;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .nextBtn{
+        right: -25px;   
+       
+    }
+
+    .prevBtn{
+        left: 0px;
+    }
+
+    footer{
+        height: 55px;
+        text-align: center;
+        background: #03899c;
+        color: wheat;
+        padding-top: 10px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        font-size: 14px;
+    }
+    
+    /* CSS3 animtion keyframes */
+  
+    @keyframes bouncing{
+        0%{
+            transform: translateY(0px);
+        }
+        25%{
+            transform: translateY(-25px);
+        }
+        50%{
+            transform: translateY(0px);
+        }
+        75%{
+            transform: translateY(-15px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }

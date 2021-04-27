@@ -1,0 +1,38 @@
+[
+    {
+        "alt": "Fahrrad-1",
+        "surc": "img/Fahrraeder/fahrrad1.jpg"
+    },
+    {
+        "alt": "Fahrrad-2",
+        "surc": "img/Fahrraeder/fahrrad2.jpg"
+    },
+    {
+        "alt": "Fahrrad-3",
+        "surc": "img/Fahrraeder/fahrrad3.jpg"
+    },   
+    {
+        "alt": "Fahrrad-4",
+        "surc": "img/Fahrraeder/fahrrad4.jpg"
+    }, 
+    {
+        "alt": "Fahrrad-5",
+        "surc": "img/Fahrraeder/fahrrad5.jpg"
+    },
+    {
+        "alt": "Fahrrad-6",
+        "surc": "img/Fahrraeder/fahrrad6.jpg"
+    },   
+    {
+        "alt": "Fahrrad-7",
+        "surc": "img/Fahrraeder/fahrrad7.jpg"
+    }, 
+    {
+        "alt": "Fahrrad-8",
+        "surc": "img/Fahrraeder/fahrrad8.jpg"
+    },{
+        "alt": "Fahrrad-9",
+        "surc": "img/Fahrraeder/fahrrad9.jpg"
+    }  
+
+ ]

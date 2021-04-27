@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--
+/* 
+    Created on : 19.02.2021, 11:25:56
+    Author     : ahmad
+*/
+
+-->
+<html>
+    <head>
+        <title>Fotos Gallerie</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css"  >
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="shortcut icon" href="#">
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --hc:linear-gradient(to bottom, #03899c, rgb(201, 250, 220), #03899c);
+                --bg :linear-gradient(to right, #fec, white, #fec);
+            }
+
+            html,
+            body {
+                height: 1000px;
+                text-align: center;
+                align-items: center;
+                background: var(--bg); 
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+            nav{
+                font-size: 20px;
+                font-weight: 500;
+                background: #03899c;
+                height: 40px;
+                width: 100%;
+            }   
+
+            nav a{
+                font-weight: 600;
+                color: wheat;
+            } 
+
+            nav a:hover{
+                font-weight: 800;
+            } 
+
+            .hh1{
+                color: black; 
+                font-size: 40px;
+                font-weight: 500;
+            }
+
+            .hh2{
+                color: white; 
+                font-size: 30px;
+                font-weight: 500;
+            }
+            .logo{
+                float: left;
+                width: 60px;
+                height: 45px;
+                margin-top: 5px;
+            }
+            .btn{
+                background: var(--hc);
+                color:  black;
+                height:50px;
+                padding: 10px;
+                border-radius: 35px;
+                width: 130px;
+                font-size: 22px;
+            }
+
+            .btn:hover{
+                color: rgb(37, 156, 97);
+                font-weight: 600;
+            }
+
+            .images{
+                border-radius: 5px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                margin-bottom: 60px;
+                height: 300px;
+            }
+
+            .images > img{
+                border: 1px solid gray;
+                border-radius: 5px;
+                box-shadow:2px 2px 2px #888888;
+                width: 70px;
+                height: 70px;
+                margin-left: 3px;
+                cursor: pointer;
+                opacity: .6;
+            }
+
+            .images > img.active{
+                animation: bouncing 1s ease;
+                opacity: 1;
+            }
+
+            .container {
+                width: 700px;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                position: absolute;
+                left:25%;
+            }
+
+            .button{
+                margin-top: 10px;
+            }
+
+            .bigImg{
+                border: 1px solid gray;
+                border-radius: 5px;
+                background: #374646;
+                margin-top: 20px;
+                width: 700px;
+                height: 580px; 
+                position: relative;
+            }
+
+            .imge{
+                margin-top: 12px; 
+                width: 600px;
+                height: 500px;
+                box-shadow: 5px 15px 20px #888888;
+                border-radius: 7px;     
+            }
+
+            #imgText {
+                position: relative;
+                left: 15px;
+                bottom: 1px;
+                color: rgb(255, 255, 255);
+                font-size: 35px;
+            }
+
+            .nextBtn, .prevBtn{
+                cursor: pointer;
+                position: absolute;
+                top: 25%;
+                width: auto;
+                padding: 6px;
+                color: white;
+                font-weight: bold;
+                font-size: 15px;
+            }
+
+            .nextBtn{
+                right: -25px;   
+
+            }
+
+            .prevBtn{
+                left: 0px;
+            }
+
+            footer{
+                height: 55px;
+                text-align: center;
+                background: #03899c;
+                color: wheat;
+                padding-top: 10px;
+                width: 100%;
+                position: fixed;
+                bottom: 0;
+                font-size: 14px;
+            }
+
+            /* CSS3 animtion keyframes */
+
+            @keyframes bouncing{
+                0%{
+                    transform: translateY(0px);
+                }
+                25%{
+                    transform: translateY(-25px);
+                }
+                50%{
+                    transform: translateY(0px);
+                }
+                75%{
+                    transform: translateY(-15px);
+                }
+                100%{
+                    transform: translateY(0px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <img class="logo" src="img/logo.png" alt="alt"/>
+                <a class="navbar-brand" href="" id="allFotos">All_Fotos</a>          
+                <a class="navbar-brand" href="http://alhamad.rf.gd/" target="_blank">Home</a>          
+ 
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+           
+          </div>
+        </nav>
+
+        <div class='headerTitle'>
+            <h2 class='hh1'>Fotos_Galleries Mit Pfeile</h2>
+        </div>
+
+       
+        
+        <div id="container" class="container">        
+            
+            <div id='bigImg' class="bigImg"> 
+                <img class="imge" src="img/Fahrraeder/fahrrad5.jpg" alt=""/>
+                <div id="imgText"><h2>Phone</h2></div>
+            </div> 
+
+            <div class='images' id="images">
+               <img class="imge active" src="img/Fahrraeder/fahrrad5.jpg" alt=""/>
+            </div>
+
+             
+        </div>
+        
+        <footer>
+            <p>Copyright &copy;2021 Ahmad Alhamd @email : alhamad.ahmad@web.de</p>
+        </footer>  
+        
+         <script src="js/vendor/jquery-1.11.2.min.js"> </script>
+         <script src="js/vendor/bootstrap.js"> </script>
+         
+         
+         <script> 
+         
+         
+                $(function(){
+                    $('#allFotos').on('click', function (e) {
+                        e.preventDefault();
+                        loadFotos("js/fahrraerder.json");
+                        loadFotos("js/autos.json");
+                        loadFotos("js/flugzeuge.json");
+                        
+                        let butns= `<img class="nextBtn" src="img/next.png" alt="" >`;
+                        butns += `<img class="prevBtn" src="img/prev.png" alt="" >`;
+                        $('#container').append(butns);
+
+                    });
+
+
+
+                    //////////////////////////// Click auf einem Bild /////////////////
+
+
+                    $('#images').on('click', 'img',function () {
+                        let imgsNum = $('#images').find('img').length;
+                        for (var i = 0; i < imgsNum; i++) {
+                             if ($('#images').find('img').hasClass('active')) {
+                                $('#images').find('img').removeClass('active');
+                            }
+
+                        }
+                         $(this).addClass('active');      
+                         var image = $(this).clone();
+
+                         showImg(image); 
+                    });
+
+
+
+                    ///////////////////// Next Button ////////////////////
+
+                     $('#container').on('click','.nextBtn', function ()  {
+
+                        let imgsNum = $('#images').find('img').length;
+                          $('#container').find('img.prevBtn').show();  
+                        $('#bigImg').empty();        
+                        let img= $('#images img.active').removeClass("active").next().addClass("active");
+                        let img2 = img.clone();
+
+                        let prvAll = $('#images img.active').prevAll().length;
+
+                        if(prvAll=== (imgsNum-1)){
+                            $('#container').find('img.nextBtn').hide();
+                        }else{
+                          $('#container').find('img.nextBtn').show();  
+                        }
+                        showImg(img2);
+
+                    });
+
+
+                //    //////////////////// Previous Button ////////////////////
+
+                    $('#container').on('click','.prevBtn', function () {
+                        let imgsNum = $('#images').find('img').length;
+                        let nxtAll = $('#images img.active').nextAll().length;
+                        $('#container').find('img.nextBtn').show();  
+
+                        if(nxtAll=== (imgsNum-2)){
+                            $('#container').find('img.prevBtn').hide();
+                        }else{
+                          $('#container').find('img.prevBtn').show();  
+                        }
+
+                        $('#bigImg').empty();
+                        let img= $('#images img.active').removeClass("active").prev().addClass("active");
+                        let img2 = img.clone();
+                        showImg(img2);
+                    });
+
+
+                });// end Ready
+
+                /**
+                 * zeige das Bild im großen Bild, wenn es geclicket hat
+                 * @param {img} img
+                 * @returns {undefined}
+                 */
+                function showImg(img){
+                    let alt = img.attr('alt');
+                    img.attr('class','imge');
+                    currAlt = `<div><h2 class="hh2">${alt}</h2></div>`;       
+                    $('#bigImg').empty().append(img);  
+                    $('#bigImg').append(currAlt);
+                }
+
+
+                /**
+                 * to load images to Div 
+                 * @param {string} jsonFile the path to json file
+                 * @returns {json}
+                 */
+                function loadFotos(jsonFile){
+                    $.ajaxSetup({cache: false});
+                    $.getJSON(jsonFile)          
+                        .done(function (Bilder) {
+                            $.each(Bilder, function (key) {
+                                let bild = Bilder[key].surc;
+                                let txt = Bilder[key].alt;
+                                $(`<img class="imge" src=${bild} alt =${txt}>`)
+                                        .appendTo('#images').fadeIn(1000);                   
+                            });
+                        })           
+                        .fail(function () {
+                            $('#content').text('Entschuldigung ,,,, etwas Passiert');
+                        });
+                }
+         
+         </script>
+         
+    </body>
+</html>
